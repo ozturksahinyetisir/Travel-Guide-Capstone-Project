@@ -50,14 +50,19 @@ Travel Guide App is an application about guiding to people travel places. Find p
   
 
   ## Home Page
+  <p align="center"><img width="28%" src="https://github.com/ozturksahinyetisir/Travel-Guide-Capstone-Project/blob/main/gifs/home.gif" alt="gif image"/></p>
   
   ## Search Page
+  <p align="center"><img width="28%" src="https://github.com/ozturksahinyetisir/Travel-Guide-Capstone-Project/blob/main/gifs/search.gif" alt="gif image"/></p>
   
   ## Trip Page
+  <p align="center"><img width="28%" src="https://github.com/ozturksahinyetisir/Travel-Guide-Capstone-Project/blob/main/gifs/bookmark.gif" alt="gif image"/></p>
   
   ## Guide Page
+  <p align="center"><img width="28%" src="https://github.com/ozturksahinyetisir/Travel-Guide-Capstone-Project/blob/main/gifs/guide.gif" alt="gif image"/></p>
   
   ## Detail Page
+  <p align="center"><img width="28%" src="https://github.com/ozturksahinyetisir/Travel-Guide-Capstone-Project/blob/main/gifs/detail.gif" alt="gif image"/></p>
   
   ## New Trip Page
   
