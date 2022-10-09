@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.Search.SearchFragment">
+
+
+
+        <TextView
+            android:id="@+id/searchTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:fontFamily="@font/source_sans_pro_bold"
+            android:textSize="@dimen/_22ssp"
+            android:textColor="@color/ebony_clay"
+            android:layout_marginTop="@dimen/_45sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/llSearch"
+            android:layout_width="378dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            app:layout_constraintBottom_toTopOf="@+id/topDestTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchTv">
+
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="@string/searchbarsearch"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/ic_searchview_icon"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/searchBox"
+                app:layout_constraintEnd_toEndOf="@+id/searchBox"
+                app:layout_constraintTop_toTopOf="@+id/searchBox" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/topDestTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/source_sans_pro_bold"
+            android:text="TOP DESTINATIONS"
+            android:textColor="@color/ebony_clay"
+            android:textSize="@dimen/_14ssp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@+id/searchTv"
+            app:layout_constraintTop_toBottomOf="@+id/llSearch" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/grids2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="6dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topDestTv"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:spanCount="1"
+            tools:itemCount="12"
+            tools:listitem="@layout/recycler_item2" />
+
+        <TextView
+            android:id="@+id/NearbyTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEARBY ATTRACTIONS"
+            android:textColor="@color/ebony_clay"
+            android:fontFamily="@font/source_sans_pro_bold"
+            android:textSize="@dimen/_14ssp"
+            android:layout_marginTop="@dimen/_14sdp"
+
+            app:layout_constraintStart_toStartOf="@+id/searchTv"
+            app:layout_constraintTop_toBottomOf="@+id/grids2" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/grids3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="6dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/NearbyTv"
+            app:spanCount="1"
+            tools:itemCount="12"
+            tools:listitem="@layout/recycler_item_search_wide" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

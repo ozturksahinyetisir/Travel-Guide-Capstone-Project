@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2855" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/background_homepage.xml" value="0.35" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/bookmark_bg.xml" value="0.338" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/button_selected_background.xml" value="0.195" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/circle_background_pink.xml" value="0.338" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/home_selector.xml" value="0.333" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/ic_bookmark_red.xml" value="0.2245" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/ic_calender.xml" value="0.3675" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/ic_fill_calender.xml" value="0.3675" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/ic_fill_car.xml" value="0.35" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/ic_fill_flight.xml" value="0.35" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/ic_fill_hotel.xml" value="0.35" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/ic_fill_resort.xml" value="0.196" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/ic_fill_restaurant.xml" value="0.196" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/ic_fill_sightseeing.xml" value="0.196" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/ic_fill_star.xml" value="0.287" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/ic_fill_taxi.xml" value="0.35" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/ic_guide.xml" value="0.333" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/ic_home.xml" value="0.333" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/ic_home_white.xml" value="0.333" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.333" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/ic_loader.xml" value="0.2855" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/ic_plus.xml" value="0.338" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/ic_save.xml" value="0.338" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/ic_searchview_icon.xml" value="0.196" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/item_selector.xml" value="0.333" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/rectangle_5.xml" value="0.35" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/rounded_corner.xml" value="0.333" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/rounded_corner_white_transparent.xml" value="0.196" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/rounded_icon_corner.xml" value="0.333" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/selector_guide.xml" value="0.333" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/selector_home.xml" value="0.35" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/selector_nb_bg.xml" value="0.1325" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/selector_search.xml" value="0.333" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/selector_trip.xml" value="0.333" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/selectorx2.xml" value="0.3665" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/shape_button.xml" value="0.338" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/shape_filter_buttom.xml" value="0.3675" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/drawable/tag.xml" value="0.35" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/layout/activity_detail.xml" value="0.33" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/layout/activity_main.xml" value="0.29717180244829045" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/layout/fragment_all.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/layout/fragment_bookmark.xml" value="0.14279606669516887" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/layout/fragment_custom_dialog.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/layout/fragment_detail.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/layout/fragment_flights.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/layout/fragment_guide.xml" value="0.33" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/layout/fragment_hotels.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/layout/fragment_new_trip.xml" value="0.2" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/layout/fragment_search.xml" value="0.25" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/layout/fragment_second.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/layout/fragment_transportations.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/layout/fragment_trip.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/layout/fragment_trip_list.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/layout/recycler_detail.xml" value="1.0" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/layout/recycler_item.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/layout/recycler_item2.xml" value="0.30012825994014536" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/layout/recycler_item_might.xml" value="0.30012825994014536" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/layout/recycler_item_search_wide.xml" value="0.364613880742913" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/layout/recycler_item_top_pick.xml" value="0.33" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/layout/recycler_item_top_pick2.xml" value="0.4013683010262258" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/layout/recycler_trip.xml" value="0.30012825994014536" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/menu/bottom_add.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/menu/bottom_menu.xml" value="0.3099615220179564" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/menu/menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/menu/menu_item_search.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/slore/AndroidStudioProjects/TravelGuideApp/app/src/main/res/menu/search_menu.xml" value="0.30085470085470084" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

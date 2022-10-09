@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.ozturksahinyetisir.travelguideapp.view.home.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_guideFragment"
+            app:destination="@id/guideFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_tripFragment"
+            app:destination="@id/tripFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailActivity"
+            app:destination="@id/detailActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.ozturksahinyetisir.travelguideapp.view.MainActivity"
+        android:label="MainActivity" />
+    <fragment
+        android:id="@+id/guideFragment"
+        android:name="com.ozturksahinyetisir.travelguideapp.view.guide.GuideFragment"
+        android:label="GuideFragment" >
+        <action
+            android:id="@+id/action_guideFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_guideFragment_to_detailActivity"
+            app:destination="@id/detailActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/tripFragment"
+        android:name="com.ozturksahinyetisir.travelguideapp.view.Trip.TripFragment"
+        android:label="TripFragment" >
+        <action
+            android:id="@+id/action_tripFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_tripFragment_to_detailActivity"
+            app:destination="@id/detailActivity" />
+        <action
+            android:id="@+id/action_tripFragment_to_tripListFragment"
+            app:destination="@id/tripListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.ozturksahinyetisir.travelguideapp.view.Search.SearchFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_detailActivity"
+            app:destination="@id/detailActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/detailActivity"
+        android:name="com.ozturksahinyetisir.travelguideapp.view.DetailActivity"
+        android:label="DetailActivity" />
+    <fragment
+        android:id="@+id/newTripFragment"
+        android:name="com.ozturksahinyetisir.travelguideapp.view.Trip.NewTripFragment"
+        android:label="NewTripFragment" />
+    <fragment
+        android:id="@+id/tripListFragment"
+        android:name="com.ozturksahinyetisir.travelguideapp.view.Trip.TripListFragment"
+        android:label="TripListFragment" >
+        <action
+            android:id="@+id/action_tripListFragment_to_newTripFragment"
+            app:destination="@id/newTripFragment" />
+    </fragment>
+</navigation>

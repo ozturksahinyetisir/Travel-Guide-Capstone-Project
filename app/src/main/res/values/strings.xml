@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Travel Guide App</string>
+    <string name="nextdest">Where\'s your\nnext destination</string>
+    <string name="seeall"><u>See all</u></string>
+    <string name="all"><u>All</u></string>
+    <string name="searchbarguide"><font face="sourse_sans_pro_bold" size="15"><b>A country, a city, a place... or anything</b></font></string>
+    <string name="searchbarsearch"><font size="15">Where next?</font></string>
+    <string name="hello_blank_fragment">Test</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum non id venenatis, elementum. Enim augue velit tristique eu viverra. Massa.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum non id venenatis, elementum. Enim augue velit tristique eu viverra. Massa. </string>
+
+
+</resources>

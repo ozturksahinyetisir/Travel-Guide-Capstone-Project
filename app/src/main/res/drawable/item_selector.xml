@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true"
+        android:color="@color/magic_potion"
+        >
+    </item>
+
+    <item android:state_selected="true"
+        android:color="@color/white">
+        <shape android:shape="rectangle">
+            <corners android:radius="50dp"/>
+            <solid android:color="#F40E0E"/>
+        </shape>
+    </item>
+
+
+    <item android:color="#181A25"/>
+</selector>

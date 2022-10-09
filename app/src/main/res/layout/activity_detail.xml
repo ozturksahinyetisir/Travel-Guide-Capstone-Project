@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutDetail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_280sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".view.DetailActivity"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="40dp"
+            >
+
+
+            <ImageView
+                android:id="@+id/topBg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_280sdp"
+                android:background="@null"
+                android:scaleType="centerCrop"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/arrow1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/bookmark_bg"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_arrow"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </ImageView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/detailRecyclerBg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@drawable/rectangle_5"
+        app:layout_constraintBottom_toBottomOf="@+id/gridsDetail"
+        app:layout_constraintEnd_toEndOf="@+id/gridsDetail"
+        android:layout_marginEnd="70dp"
+        android:layout_marginStart="70dp"
+        app:layout_constraintStart_toStartOf="@+id/gridsDetail"
+        app:layout_constraintTop_toTopOf="@+id/gridsDetail" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/gridsDetail"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="@+id/relativeLayoutDetail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:spanCount="1"
+        tools:itemCount="12"
+        tools:listitem="@layout/recycler_detail"
+        android:layout_marginEnd="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_50sdp"
+        android:layout_marginBottom="@dimen/_20sdp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/topTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayoutDetail"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginStart="25dp"
+        android:fontFamily="@font/source_sans_pro_bold"
+        android:text="Nusa Pedina"
+        android:textColor="@color/ebony_clay"
+        android:textSize="@dimen/_25ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayoutDetail" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/locationTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topTv"
+        android:layout_alignStart="@+id/topTv"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:fontFamily="@font/montserrat_alternates"
+        android:text="Bali,Indonesia"
+        android:textColor="#39414B"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toStartOf="@+id/topTv"
+        app:layout_constraintTop_toBottomOf="@+id/topTv" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/pinIcon"
+        android:layout_width="@dimen/_10sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_alignBottom="@+id/locationTv"
+        android:layout_toStartOf="@+id/locationTv"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:background="@drawable/ic_pin"
+        app:layout_constraintBottom_toBottomOf="@+id/locationTv"
+        app:layout_constraintEnd_toStartOf="@+id/locationTv" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="227dp"
+        app:layout_constraintTop_toBottomOf="@+id/locationTv">
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="NotSibling">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/descriptionTv"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_below="@+id/pinIcon"
+                android:layout_alignStart="@+id/pinIcon"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:fontFamily="@font/montserrat_alternates"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum non id venenatis, elementum. Enim augue velit tristique eu viverra. Massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum non id venenatis, elementum. Enim augue velit tristique eu viverra. Massa. "
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/locationTv" />
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bookmarkButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+
+        <ImageView
+            android:id="@+id/backgroundBookmark"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_icon_corner"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/bookmarkTv"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/bookmarkTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/source_sans_pro_semibold"
+            android:text="Add Bookmark"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/backgroundBookmark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/backgroundBookmark">
+
+        </TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/fullImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:visibility="visible">
+    </ImageView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
