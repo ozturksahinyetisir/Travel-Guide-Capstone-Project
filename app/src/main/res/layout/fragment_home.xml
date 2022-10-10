@@ -22,31 +22,41 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:context=".view.home.HomeFragment">
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/consInRl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/topBg"
                 android:layout_width="match_parent"
                 android:layout_height="350dp"
-                android:background="@drawable/background_home"
-                />
+                android:background="@drawable/background_home" />
+
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/destinationTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
-                android:layout_marginTop="160dp"
+                android:layout_marginTop="140dp"
                 android:fontFamily="@font/source_sans_pro_semibold"
                 android:text="@string/nextdest"
                 android:textColor="#FCFCFD"
                 android:textSize="30sp" />
 
             <LinearLayout
+                android:id="@+id/iconsLL"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/destinationTv"
                 android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginTop="8dp">
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="15dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/flightsIconBg"
@@ -56,6 +66,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/rounded_corner_white_transparent"
                     android:padding="10dp">
+
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/flightsIcon"
@@ -73,6 +84,7 @@
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/hotelsIconBg"
@@ -148,8 +160,78 @@
 
             </LinearLayout>
 
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iconsLL"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:fontFamily="@font/source_sans_pro_semibold"
+                    android:text="Flights"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iconsLL">
+
+                </androidx.appcompat.widget.AppCompatTextView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/source_sans_pro_semibold"
+                    android:text="Hotels"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iconsLL">
+
+                </androidx.appcompat.widget.AppCompatTextView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/source_sans_pro_semibold"
+                    android:text="Cars"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iconsLL">
+
+                </androidx.appcompat.widget.AppCompatTextView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/source_sans_pro_semibold"
+                    android:text="Taxi"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iconsLL">
+
+                </androidx.appcompat.widget.AppCompatTextView>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
 
         </RelativeLayout>
+
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

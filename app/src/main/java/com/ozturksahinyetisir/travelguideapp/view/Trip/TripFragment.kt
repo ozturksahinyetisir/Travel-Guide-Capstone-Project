@@ -35,6 +35,8 @@ class TripFragment : Fragment() {
             binding.viewPager.adapter = adapter
 
             binding.tabLayout.setupWithViewPager(binding.viewPager)
+            binding.tabLayout.getTabAt(0)?.setIcon(R.drawable.ic_trip)
+            binding.tabLayout.getTabAt(1)?.setIcon(R.drawable.ic_fill_bookmark)
 
 
             binding.cleanButton.setOnClickListener{
