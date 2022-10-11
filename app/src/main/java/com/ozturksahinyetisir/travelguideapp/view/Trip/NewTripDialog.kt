@@ -1,24 +1,27 @@
 package com.ozturksahinyetisir.travelguideapp.view.Trip
 
+import android.app.Dialog
 import android.content.Context
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
-import androidx.fragment.app.DialogFragment
 import com.ozturksahinyetisir.travelguideapp.databinding.FragmentCustomDialogBinding
 import com.ozturksahinyetisir.travelguideapp.room.TravelDatabase
 
-class NewTripDialog : DialogFragment() {
+class NewTripDialog(context: Context) : Dialog(context) {
+    //,android.R.style.Theme_Material_NoActionBar_Fullscreen) {
     val TAG = "NewTripDialog"
     private lateinit var binding: FragmentCustomDialogBinding
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
-    ): View? {
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         binding = FragmentCustomDialogBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+
         /**
          * get calender date as i,i2,i3 = YYYY/MM/DD
          */
@@ -28,7 +31,7 @@ class NewTripDialog : DialogFragment() {
             binding.tripDate.text = datetext
         }
 
-        activity?.let { activity ->
+        context?.let { activity ->
             var customList2 = ArrayList<String>()
 
             val data = TravelDatabase.getDatabase(activity)
@@ -47,6 +50,7 @@ class NewTripDialog : DialogFragment() {
                     val selectedItem = p0?.getItemAtPosition(p2).toString()
                     binding.textView.text = selectedItem
                 }
+
                 override fun onNothingSelected(p0: AdapterView<*>?) {
                 }
 
@@ -54,10 +58,11 @@ class NewTripDialog : DialogFragment() {
             /**
              * [saveTrip] setOnClickListener uses sharedPreferences to get trip name & date.
              * Set this trip & date to text views.
-             * And close dialog.
+             * And dismiss dialog.
+             * dialog dismiss listener opens new data immediately.
              */
             binding.saveTrip.setOnClickListener {
-                var preferences = requireActivity().applicationContext.getSharedPreferences(
+                var preferences = context.applicationContext.getSharedPreferences(
                     "tripdata",
                     Context.MODE_PRIVATE
                 )
@@ -67,14 +72,11 @@ class NewTripDialog : DialogFragment() {
                 var getDate = binding.tripDate.text.toString()
                 editor.putString("trip", "$getTrip").apply()
                 editor.putString("date", "$getDate").apply()
-                binding.textView.text = getTrip
-                binding.tripDate.text = getDate
+
                 Toast.makeText(context, "Trip Successfully Set", Toast.LENGTH_LONG).show()
-                dialog?.cancel()
-                //TODO: Call data & fragment again to see new trip immediately.
+                dismiss()
+
             }
         }
-        return binding.root
     }
-
 }

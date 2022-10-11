@@ -28,6 +28,7 @@ class DetailAdapter(val context: Context, val imgList: List<TravelModel.ImageRoo
     fun ClickListener(listener: clickListener){
         mListener = listener
     }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TravelDetailModelViewHolder {
         val travelBinding = RecyclerDetailBinding.inflate(LayoutInflater.from(parent.context))
 

@@ -46,183 +46,190 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/destinationTv"
-                android:layout_marginStart="15dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="15dp">
+                android:layout_marginEnd="10dp">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/flightsIconBg"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/rounded_corner_white_transparent"
-                    android:padding="10dp">
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/flightsIconBg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_corner_white_transparent"
+                        android:padding="11dp">
 
 
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/flightsIcon"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_alignStart="@+id/flightsIconBg"
-                        android:layout_alignTop="@+id/flightsIconBg"
-                        android:layout_alignEnd="@+id/flightsIconBg"
-                        android:layout_alignBottom="@+id/flightsIconBg"
-                        android:src="@drawable/ic_fill_flight"
-                        app:layout_constraintBottom_toBottomOf="parent"
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/flightsIcon"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_alignStart="@+id/flightsIconBg"
+                            android:layout_alignTop="@+id/flightsIconBg"
+                            android:layout_alignEnd="@+id/flightsIconBg"
+                            android:layout_alignBottom="@+id/flightsIconBg"
+                            android:src="@drawable/ic_fill_flight"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/flightsTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/source_sans_pro_semibold"
+                        android:text="Flights"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toBottomOf="@+id/iconsLL">
 
+                    </androidx.appcompat.widget.AppCompatTextView>
+                </LinearLayout>
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/hotelsIconBg"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/rounded_corner_white_transparent"
-                    android:padding="10dp">
+                    android:orientation="vertical">
 
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/hotelsIcon"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/hotelsIconBg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/rounded_corner_white_transparent"
+                        android:padding="11dp">
 
-                        android:src="@drawable/ic_fill_hotel"
-                        app:layout_constraintBottom_toBottomOf="parent"
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/hotelsIcon"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_fill_hotel"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/hotelsTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/source_sans_pro_semibold"
+                        android:text="Hotels"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toBottomOf="@+id/iconsLL">
 
+                    </androidx.appcompat.widget.AppCompatTextView>
+                </LinearLayout>
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/carsIconBg"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/rounded_corner_white_transparent"
-                    android:padding="10dp">
+                    android:orientation="vertical">
 
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/carIcon"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/ic_fill_car"
-                        app:layout_constraintBottom_toBottomOf="parent"
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/carsIconBg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/rounded_corner_white_transparent"
+                        android:padding="11dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/carIcon"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_fill_car"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/carsTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/source_sans_pro_semibold"
+                        android:text="Cars"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toBottomOf="@+id/iconsLL">
 
+                    </androidx.appcompat.widget.AppCompatTextView>
+                </LinearLayout>
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/taxiIconBg"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/rounded_corner_white_transparent"
-                    android:padding="10dp">
+                    android:orientation="vertical">
 
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/taxiIcon"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/taxiIconBg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/rounded_corner_white_transparent"
+                        android:padding="11dp">
 
-                        android:src="@drawable/ic_fill_taxi"
-                        app:layout_constraintBottom_toBottomOf="parent"
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/taxiIcon"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_fill_taxi"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/source_sans_pro_semibold"
+                        android:text="Taxi"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toBottomOf="@+id/iconsLL">
 
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
+                    </androidx.appcompat.widget.AppCompatTextView>
+                </LinearLayout>
 
             </LinearLayout>
 
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/iconsLL"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="10dp">
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.7"
-                    android:fontFamily="@font/source_sans_pro_semibold"
-                    android:text="Flights"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/iconsLL">
-
-                </androidx.appcompat.widget.AppCompatTextView>
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.8"
-                    android:fontFamily="@font/source_sans_pro_semibold"
-                    android:text="Hotels"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/iconsLL">
-
-                </androidx.appcompat.widget.AppCompatTextView>
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/source_sans_pro_semibold"
-                    android:text="Cars"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/iconsLL">
-
-                </androidx.appcompat.widget.AppCompatTextView>
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/source_sans_pro_semibold"
-                    android:text="Taxi"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/iconsLL">
-
-                </androidx.appcompat.widget.AppCompatTextView>
-
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
 
 
         </RelativeLayout>
-
 
 
         <androidx.constraintlayout.widget.ConstraintLayout

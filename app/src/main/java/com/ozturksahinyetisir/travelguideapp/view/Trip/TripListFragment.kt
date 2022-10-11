@@ -1,23 +1,20 @@
 package com.ozturksahinyetisir.travelguideapp.view.Trip
 
 import android.content.Context
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ozturksahinyetisir.travelguideapp.adapters.TripAdapter
 import com.ozturksahinyetisir.travelguideapp.databinding.FragmentTripListBinding
 import com.ozturksahinyetisir.travelguideapp.domain.model.TravelModel
 import com.ozturksahinyetisir.travelguideapp.room.TravelDatabase
-import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.collections.ArrayList
 
 
 class TripListFragment : Fragment() {
@@ -35,9 +32,18 @@ class TripListFragment : Fragment() {
          * open new trip dialog with [floatingActionButton]
          */
         binding.floatingActionButton.setOnClickListener {
+
             Log.e(TAG, "floating button clicked")
-            val dialog = NewTripDialog()
-            dialog.show(childFragmentManager, "newTrip")
+            activity?.let { activity ->
+                val dialog = NewTripDialog(activity)
+                dialog.setOnDismissListener {
+                    getData(activity)
+                }
+                dialog.show()
+
+            }
+
+
         }
         return binding.root
     }
@@ -45,43 +51,49 @@ class TripListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         activity?.let { activity ->
-        /**
-         * get data from room database
+            /**
+             * get data from room database
              */
-            try {
-                val data = TravelDatabase.getDatabase(activity)
-                travelModel = data.roomDao().getTravel()
-                travelModel?.let { travelModel ->
-                    /**
-                     * [customList2] filters our choice at dialog screen and save this trip for us.
-                     * used sharedPreferences at here.
-                     */
-                    val customList2 = travelModel.filter {
-                        var preferences = requireActivity().applicationContext.getSharedPreferences(
-                            "tripdata",
-                            Context.MODE_PRIVATE
-                        )
-                        var trip = preferences.getString("trip", "")
-                        Log.e(TAG, "trip ${trip}")
-                        it.title == trip
-                    }
-                    setupRecyclerViewTrip(customList2 as ArrayList<TravelModel>)
-                }
-            } catch (e: Exception) {
-                Log.e(TAG, "onViewCreated: ex ${e.message}")
-            }
+            getData(activity)
 
 
-            val layoutManager: RecyclerView.LayoutManager = GridLayoutManager(
-                activity.applicationContext,
-                1,
-                GridLayoutManager.VERTICAL,
-                false
-            )
-            binding.grids.layoutManager = layoutManager
         }
 
     }
+
+    fun getData(activity: FragmentActivity) {
+        try {
+            val data = TravelDatabase.getDatabase(activity)
+            travelModel = data.roomDao().getTravel()
+            travelModel?.let { travelModel ->
+                /**
+                 * [customList2] filters our choice at dialog screen and save this trip for us.
+                 * used sharedPreferences at here.
+                 */
+                val customList2 = travelModel.filter {
+                    var preferences = requireActivity().applicationContext.getSharedPreferences(
+                        "tripdata",
+                        Context.MODE_PRIVATE
+                    )
+                    var trip = preferences.getString("trip", "")
+                    Log.e(TAG, "trip ${trip}")
+                    it.title == trip
+                }
+                setupRecyclerViewTrip(customList2 as ArrayList<TravelModel>)
+            }
+        } catch (e: Exception) {
+            Log.e(TAG, "onViewCreated: ex ${e.message}")
+        }
+
+        val layoutManager: RecyclerView.LayoutManager = GridLayoutManager(
+            activity.applicationContext,
+            1,
+            GridLayoutManager.VERTICAL,
+            false
+        )
+        binding.grids.layoutManager = layoutManager
+    }
+
 
     /**
      * [setupRecyclerViewBookmark] -> [newList] as TravelModel

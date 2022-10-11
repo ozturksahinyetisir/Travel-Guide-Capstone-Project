@@ -37,11 +37,14 @@ class DetailActivity : AppCompatActivity() {
         binding.descriptionTv.text = "$desc"
         binding.locationTv.text = "$country"
 
-        binding.arrow1.setOnClickListener{
-            Picasso.get()
-                .load(imgurl)
-                .placeholder(R.drawable.ic_loader)
-                .into(binding.fullImage)
+        binding.arrow1.setOnClickListener {
+
+            if (chosenImg != "") {
+                FullscreenImageDialog(this, chosenImg).show()
+
+            }
+
+
         }
 
         val data = TravelDatabase.getDatabase(this@DetailActivity)
@@ -90,6 +93,7 @@ class DetailActivity : AppCompatActivity() {
     /**
      * [setupRecy] setup adapter to RecyclerView.
      */
+    var chosenImg = ""
     fun setupRecy(newList: List<TravelModel.ImageRoomlist>) {
         binding.gridsDetail.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
@@ -100,9 +104,11 @@ class DetailActivity : AppCompatActivity() {
         /**
          * [imgClick] change top image with detail images.
          */
+
+        chosenImg = newList[0].url.toString()
         detailAdapter!!.ClickListener(object : DetailAdapter.clickListener {
             override fun imgClick(img_src: String) {
-
+                chosenImg = img_src
                 Picasso.get()
                     .load(img_src)
                     .placeholder(R.drawable.ic_loader)
